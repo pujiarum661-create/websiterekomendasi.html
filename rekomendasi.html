@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rekomendasi — SavorySpot</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="rekomendasi.css"/>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="home.html">Savory<span>Spot</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="menuNav">
+        <ul class="navbar-nav gap-2">
+          <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link aktif" href="rekomendasi.html">Rekomendasi</a></li>
+          <li class="nav-item"><a class="nav-link" href="kategori.html">Kategori</a></li>
+          <li class="nav-item"><a class="nav-link" href="kontak.html">Kontak</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section class="header-halaman">
+    <div class="container text-center">
+      <p class="label">REKOMENDASI</p>
+      <h1>Kuliner <em>Terbaik</em> Pilihan Kami</h1>
+      <p>Dikurasi dari ribuan ulasan jujur. Kami pilihkan yang terbaik buat kamu.</p>
+      <div class="row justify-content-center mt-4">
+        <div class="col-md-5">
+          <input type="text" class="form-control input-cari" id="inputCari"
+            placeholder="Cari makanan atau kota..."
+            oninput="cariMakanan()"/>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="strip-filter">
+    <div class="container">
+      <button class="tombol-filter aktif" onclick="filterKategori('semua',this)">Semua</button>
+      <button class="tombol-filter" onclick="filterKategori('indonesia',this)"> Indonesia</button>
+      <button class="tombol-filter" onclick="filterKategori('jajanan',this)"> Jajanan</button>
+      <button class="tombol-filter" onclick="filterKategori('western',this)"> Western</button>
+      <button class="tombol-filter" onclick="filterKategori('dessert',this)"> Dessert</button>
+      <button class="tombol-filter" onclick="filterKategori('seafood',this)"> Seafood</button>
+      <button class="tombol-filter" onclick="filterKategori('minuman',this)"> Minuman</button>
+    </div>
+  </div>
+
+  <section class="seksi-kartu">
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-2">
+        <p class="mb-0 info-hasil">
+          Menampilkan <span id="jumlahHasil">0</span> kuliner
+        </p>
+        <select class="form-select form-select-sm w-auto" id="urutkan" onchange="urutkanKartu()">
+          <option value="default">Urutkan: Default</option>
+          <option value="rating">Rating Tertinggi</option>
+          <option value="murah">Harga Termurah</option>
+          <option value="mahal">Harga Termahal</option>
+        </select>
+      </div>
+      <div class="row g-4" id="gridKartu"></div>
+      <div id="pesanKosong" class="text-center py-5" style="display:none;">
+        
+        <p class="kosong-teks">Kuliner tidak ditemukan. Coba kata kunci lain!</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="row g-4 mb-4">
+        <div class="col-lg-4"><div class="footer-brand">Savory<span>Spot</span></div><p>Rekomendasi kuliner terpercaya di seluruh Indonesia.</p></div>
+        <div class="col-lg-2 col-6"><h5>Halaman</h5><ul><li><a href="home.html">Home</a></li><li><a href="rekomendasi.html">Rekomendasi</a></li><li><a href="kategori.html">Kategori</a></li></ul></div>
+        <div class="col-lg-2 col-6"><h5>Kota</h5><ul><li><a href="#">Jakarta</a></li><li><a href="#">Surabaya</a></li><li><a href="#">Bandung</a></li></ul></div>
+        <div class="col-lg-2 col-6"><h5>Tentang</h5><ul><li><a href="#">Tentang Kami</a></li><li><a href="#">Blog</a></li><li><a href="kontak.html">Kontak</a></li></ul></div>
+      </div>
+      <hr/>
+      <p class="footer-bawah">© 2026 SavorySpot — Dibuat untuk para pecinta kuliner.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+  <script src="rekomendasi.js"></script>
+</body>
+</html>

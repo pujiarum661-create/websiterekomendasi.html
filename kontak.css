@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,700;1,700&family=Nunito:wght@400;600;700;800&display=swap');
+
+:root{--pink-utama:#e91e8c;--pink-gelap:#6d0042;--pink-soft:#ffd6e7;--putih:#ffffff;--teks-abu:#7e3560;}
+*{margin:0;padding:0;box-sizing:border-box;}html{scroll-behavior:smooth;}
+body{font-family:'Nunito',sans-serif;background:#fff0f5;color:#3b0a28;}
+
+
+
+.navbar{background:var(--putih)!important;border-bottom:2px solid var(--pink-soft);padding:.9rem 0;}
+.navbar-brand{font-family:'Cormorant Garamond',serif;font-size:1.9rem;font-weight:700;color:var(--pink-utama)!important;text-decoration:none;}
+.navbar-brand span{color:var(--pink-gelap);}
+.nav-link{color:var(--teks-abu)!important;font-weight:600;font-size:.9rem;transition:color .3s;}
+.nav-link:hover,.nav-link.aktif{color:var(--pink-utama)!important;font-weight:800;}
+
+
+
+.header-halaman{background:linear-gradient(135deg,#6d0042,#9c1060,#b5156c);padding:3.5rem 2rem;color:#fff;text-align:center;}
+.label-kecil{font-size:.75rem;letter-spacing:3px;text-transform:uppercase;color:#f472b6;font-weight:700;margin-bottom:.5rem;}
+.header-halaman h1{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,5vw,3.2rem);font-weight:700;line-height:1.2;margin-bottom:1rem;}
+.header-halaman h1 em{color:#f472b6;font-style:italic;}
+.header-halaman p{color:rgba(255,214,231,.8);}
+
+
+.seksi-info{padding:2.5rem 0;}
+.kartu-info{background:var(--putih);border-radius:18px;padding:2rem 1.5rem;border:1.5px solid var(--pink-soft);box-shadow:0 4px 20px rgba(109,0,66,.08);height:100%;transition:transform .3s;}
+.kartu-info:hover{transform:translateY(-5px);}
+.info-ikon{font-size:2.5rem;margin-bottom:1rem;}
+.kartu-info h4{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:700;color:#6d0042;margin-bottom:.5rem;}
+.kartu-info p{font-size:.88rem;color:var(--teks-abu);margin-bottom:.2rem;}
+.kartu-info a{color:var(--pink-utama);text-decoration:none;font-weight:700;}
+.keterangan{font-size:.78rem;color:#c084a8!important;}
+
+
+.seksi-form{padding:3rem 0 5rem;}
+.kotak-form{background:var(--putih);border-radius:20px;padding:2.5rem;border:1.5px solid var(--pink-soft);box-shadow:0 4px 20px rgba(109,0,66,.08);}
+.kotak-form h2{font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:700;color:#6d0042;margin-bottom:.3rem;}
+
+
+
+.form-control,.form-select{border:1.5px solid var(--pink-soft)!important;border-radius:12px!important;padding:.75rem 1rem!important;font-family:'Nunito',sans-serif;background:#fff0f5;}
+.form-control:focus,.form-select:focus{border-color:var(--pink-utama)!important;box-shadow:0 0 0 3px rgba(233,30,140,.12)!important;background:#fff;}
+.form-label{font-size:.82rem;font-weight:700;color:var(--teks-abu);}
+.form-check-input:checked{background-color:var(--pink-utama);border-color:var(--pink-utama);}
+textarea.form-control{min-height:130px;resize:vertical;}
+
+
+.tombol-kirim{background:linear-gradient(135deg,var(--pink-utama),var(--pink-gelap));color:#fff;border:none;border-radius:50px;padding:.9rem 2rem;font-weight:800;font-size:1rem;cursor:pointer;font-family:'Nunito',sans-serif;transition:transform .3s,box-shadow .3s;}
+.tombol-kirim:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(233,30,140,.4);}
+
+
+.alert-sukses{background:linear-gradient(135deg,#10b981,#059669);color:#fff;border-radius:12px;padding:1rem 1.5rem;margin-top:1rem;font-weight:700;font-size:.92rem;}
+
+
+
+.kotak-samping{background:var(--putih);border-radius:20px;padding:2rem;border:1.5px solid var(--pink-soft);box-shadow:0 4px 20px rgba(109,0,66,.08);}
+.kotak-samping h3{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:700;color:#6d0042;margin-bottom:.5rem;}
+.kotak-samping h3 em{color:var(--pink-utama);font-style:italic;}
+.kotak-samping>p{font-size:.88rem;color:var(--teks-abu);line-height:1.7;}
+
+
+.kotak-sosmed{display:flex;flex-direction:column;align-items:center;background:#fce7f3;border:1.5px solid var(--pink-soft);border-radius:14px;padding:1rem;text-align:center;text-decoration:none;font-size:1.6rem;transition:all .3s;cursor:pointer;}
+.kotak-sosmed:hover{background:var(--pink-utama);transform:translateY(-3px);}
+.kotak-sosmed:hover .sosmed-nama,.kotak-sosmed:hover .sosmed-akun{color:#fff;}
+.sosmed-nama{font-size:.82rem;font-weight:700;color:#6d0042;margin-top:.3rem;}
+.sosmed-akun{font-size:.7rem;color:#c084a8;}
+
+
+.kotak-jam{background:#fff0f5;border:1.5px solid var(--pink-soft);border-radius:14px;padding:1.2rem;}
+.baris-jam{display:flex;justify-content:space-between;font-size:.88rem;padding:.3rem 0;border-bottom:1px solid var(--pink-soft);}
+.baris-jam:last-child{border-bottom:none;}
+.baris-jam span{color:var(--teks-abu);}
+.baris-jam strong{color:#6d0042;}
+
+
+.seksi-faq{background:#fff;padding:4rem 0;border-top:4px solid var(--pink-utama);}
+.judul-faq{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:700;color:#6d0042;}
+.judul-faq em{color:var(--pink-utama);font-style:italic;}
+
+
+.accordion-item{border:1.5px solid var(--pink-soft)!important;border-radius:12px!important;margin-bottom:.75rem;overflow:hidden;}
+.accordion-button{font-family:'Nunito',sans-serif;font-weight:700;font-size:.92rem;color:#3b0a28;background:#fff0f5;}
+.accordion-button:not(.collapsed){color:var(--pink-utama);background:#fce7f3;box-shadow:none;}
+.accordion-button:focus{box-shadow:0 0 0 3px rgba(233,30,140,.12);}
+.accordion-button::after{filter:none;}
+.accordion-body{font-size:.88rem;color:var(--teks-abu);line-height:1.75;}
+
+
+footer{background:var(--pink-gelap);color:rgba(255,214,231,.65);padding:3.5rem 0 1.5rem;}
+.footer-brand{font-family:'Cormorant Garamond',serif;font-size:1.7rem;font-weight:700;color:#fff0f5;margin-bottom:.5rem;}
+.footer-brand span{color:#f472b6;}
+footer p{font-size:.85rem;line-height:1.75;}
+footer h5{color:#fff0f5;font-size:.82rem;letter-spacing:1.2px;text-transform:uppercase;margin-bottom:1rem;}
+footer ul{list-style:none;padding:0;}footer ul li{margin-bottom:.5rem;}
+footer ul a{color:rgba(255,214,231,.55);font-size:.88rem;text-decoration:none;transition:color .3s;}
+footer ul a:hover{color:#f472b6;}
+footer hr{border-color:rgba(255,255,255,.08);}
+.footer-bawah{text-align:center;font-size:.78rem;color:rgba(255,214,231,.3);}

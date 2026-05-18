@@ -1,0 +1,329 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+    --pink: #e91e8c;
+    --pink-gelap: #7d1060;
+    --pink-muda: #fce8f3;
+    --pink-soft: #ffd6e7;
+    --putih: #ffffff;
+    --teks: #2d0a1e;
+    --teks-abu: #7a4060;
+    --bg: #fff5f9;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--bg);
+    color: var(--teks);
+    font-size: 16px;
+}
+
+.navbar {
+    background: var(--putih) !important;
+    border-bottom: 2px solid var(--pink-soft);
+    padding: 1rem 0;
+}
+
+.navbar-brand {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--pink) !important;
+    text-decoration: none;
+}
+
+.navbar-brand span {
+    color: var(--pink-gelap);
+}
+
+.nav-link {
+    color: var(--teks-abu) !important;
+    font-weight: 500;
+    font-size: 1rem;
+    padding: 0.4rem 0.8rem !important;
+    border-radius: 8px;
+    transition: all 0.2s;
+}
+
+.nav-link:hover,
+.nav-link.aktif {
+    color: var(--pink) !important;
+    font-weight: 600;
+    background: var(--pink-muda);
+}
+
+.header-halaman {
+    background: linear-gradient(135deg, #7d1060, #b5156c);
+    padding: 4rem 2rem;
+    color: white;
+    text-align: center;
+}
+
+.label {
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #ffb3d9;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.header-halaman h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 700;
+    margin-bottom: 0.8rem;
+}
+
+.header-halaman h1 em {
+    color: #ffb3d9;
+    font-style: italic;
+}
+
+.header-halaman p {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.seksi-makanan {
+    padding: 3rem 0;
+    border-top: 2px solid var(--pink-soft);
+}
+
+.seksi-makanan.bg-putih {
+    background: var(--putih);
+}
+
+.judul-seksi {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.judul-seksi span:first-child {
+    font-size: 1.8rem;
+}
+
+.judul-seksi h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--pink-gelap);
+    margin: 0;
+}
+
+.badge-jumlah {
+    background: var(--pink-muda);
+    color: var(--pink);
+    border: 1px solid var(--pink-soft);
+    border-radius: 6px;
+    padding: 0.2rem 0.7rem;
+    font-size: 0.82rem;
+    font-weight: 600;
+}
+
+.link-semua {
+    margin-left: auto;
+    color: var(--pink);
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-decoration: none;
+    border: 1.5px solid var(--pink-soft);
+    border-radius: 8px;
+    padding: 0.35rem 1rem;
+    transition: all 0.2s;
+}
+
+.link-semua:hover {
+    background: var(--pink);
+    color: white;
+}
+
+.kartu-kecil {
+    background: var(--putih);
+    border-radius: 14px;
+    overflow: hidden;
+    border: 1.5px solid var(--pink-soft);
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.kartu-kecil:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(233, 30, 140, 0.1);
+}
+
+.kk-foto {
+    height: 130px;
+    overflow: hidden;
+    background: var(--pink-muda);
+}
+
+.kk-foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s;
+}
+
+.kartu-kecil:hover .kk-foto img {
+    transform: scale(1.06);
+}
+
+.kk-isi {
+    padding: 1rem;
+}
+
+.kk-nama {
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--pink-gelap);
+    margin-bottom: 0.3rem;
+}
+
+.kk-lokasi {
+    font-size: 0.82rem;
+    color: var(--teks-abu);
+    margin-bottom: 0.5rem;
+}
+
+.kk-bawah {
+    display: flex;
+    justify-content: space-between;
+}
+
+.kk-rating {
+    font-size: 0.88rem;
+    font-weight: 700;
+    color: var(--pink);
+}
+
+.kk-harga {
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--teks-abu);
+}
+
+.seksi-kota {
+    background: linear-gradient(135deg, #7d1060, #b5156c);
+    padding: 4rem 0;
+}
+
+.seksi-kota h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
+    color: white;
+    font-weight: 700;
+}
+
+.seksi-kota h2 em {
+    color: #ffb3d9;
+    font-style: italic;
+}
+
+.kotak-kota {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1.5px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    padding: 1.5rem 1rem;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.8rem;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+.kotak-kota div {
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: white;
+    margin-top: 0.4rem;
+}
+
+.kotak-kota small {
+    font-size: 0.78rem;
+    color: rgba(255, 214, 231, 0.7);
+}
+
+.kotak-kota:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-3px);
+}
+
+footer {
+    background: var(--pink-gelap);
+    color: rgba(255, 214, 231, 0.7);
+    padding: 3rem 0 1.5rem;
+}
+
+.footer-brand {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 0.5rem;
+}
+
+.footer-brand span {
+    color: #ffb3d9;
+}
+
+footer p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+footer h5 {
+    color: white;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer ul li {
+    margin-bottom: 0.5rem;
+}
+
+footer ul a {
+    color: rgba(255, 214, 231, 0.6);
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+footer ul a:hover {
+    color: #ffb3d9;
+}
+
+footer hr {
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.footer-bawah {
+    text-align: center;
+    font-size: 0.85rem;
+    color: rgba(255, 214, 231, 0.35);
+}

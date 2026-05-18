@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kontak — SavorySpot</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="kontak.css"/>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="home.html">SAVORY<span>SPOT</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="menuNav">
+        <ul class="navbar-nav gap-3">
+          <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="rekomendasi.html">Rekomendasi</a></li>
+          <li class="nav-item"><a class="nav-link" href="kategori.html">Kategori</a></li>
+          <li class="nav-item"><a class="nav-link aktif" href="kontak.html">Kontak</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HEADER -->
+  <section class="header-halaman">
+    <div class="container text-center">
+      <p class="label-kecil">Kami Senang Mendengarmu</p>
+      <h1>Hubungi <em>SavorySpot</em></h1>
+      <p>Ada pertanyaan, saran, atau mau daftarkan restoranmu? Tim kami siap membantu! 🌸</p>
+    </div>
+  </section>
+
+  <!-- KARTU INFO KONTAK -->
+  <section class="seksi-info">
+    <div class="container">
+      <div class="row g-3">
+        <div class="col-md-3 col-6">
+          <div class="kartu-info text-center">
+            <div class="info-ikon">✉️</div>
+            <h4>Email Kami</h4>
+            <p><a href="mailto:halo@savoryspot.id">halo@savoryspot.id</a></p>
+            <p class="keterangan">Balas dalam 24 jam</p>
+          </div>
+        </div>
+        <div class="col-md-3 col-6">
+          <div class="kartu-info text-center">
+            <div class="info-ikon">📞</div>
+            <h4>Telepon</h4>
+            <p><a href="tel:+6285847663653">+62 858 4766 3653</a></p>
+            <p class="keterangan">Senin–Jumat 09:00–17:00</p>
+          </div>
+        </div>
+        <div class="col-md-3 col-6">
+          <div class="kartu-info text-center">
+            <div class="info-ikon">📍</div>
+            <h4>Alamat</h4>
+            <p>Jl. Kuliner Raya No. 88</p>
+            <p class="keterangan">Jakarta Selatan, 12190</p>
+          </div>
+        </div>
+        <div class="col-md-3 col-6">
+          <div class="kartu-info text-center">
+            <div class="info-ikon">🕐</div>
+            <h4>Jam Operasional</h4>
+            <p>Senin – Jumat</p>
+            <p class="keterangan"><strong>09:00 – 17:00 WIB</strong></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FORM + SIDEBAR -->
+  <section class="seksi-form">
+    <div class="container">
+      <div class="row g-4">
+
+        <!-- FORM KIRI -->
+        <div class="col-lg-7">
+          <div class="kotak-form">
+            <p class="label-kecil">Kirim Pesan</p>
+            <h2>Ada yang Bisa Kami Bantu?</h2>
+
+            <div class="row g-3 mt-2">
+              <div class="col-md-6">
+                <label class="form-label">Nama Lengkap *</label>
+                <input type="text" class="form-control" id="inputNama" placeholder="Nama kamu..."/>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Email *</label>
+                <input type="email" class="form-control" id="inputEmail" placeholder="email@kamu.com"/>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Nomor WhatsApp</label>
+                <input type="tel" class="form-control" id="inputHP" placeholder="+62 8xx xxxx xxxx"/>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Topik Pesan *</label>
+                <select class="form-select" id="inputTopik">
+                  <option value="">Pilih topik...</option>
+                  <option>Pertanyaan Umum</option>
+                  <option>Daftarkan Restoran</option>
+                  <option>Laporan Bug</option>
+                  <option>Kerja Sama</option>
+                  <option>Feedback</option>
+                  <option>Lainnya</option>
+                </select>
+              </div>
+              <div class="col-12">
+                <label class="form-label">Pesan *</label>
+                <textarea class="form-control" id="inputPesan" rows="5" placeholder="Tulis pesanmu di sini..."></textarea>
+              </div>
+              <div class="col-12">
+                <!-- Checkbox Bootstrap -->
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="setuju"/>
+                  <label class="form-check-label" for="setuju">
+                    Saya menyetujui Kebijakan Privasi SavorySpot
+                  </label>
+                </div>
+              </div>
+              <div class="col-12">
+                <button class="tombol-kirim w-100" onclick="kirimPesan()">
+                  ✉️ Kirim Pesan Sekarang
+                </button>
+                <div id="pesanSukses" class="alert-sukses" style="display:none;">
+                  ✅ Pesan berhasil terkirim! Kami akan membalas dalam 24 jam 🌸
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- SIDEBAR KANAN -->
+        <div class="col-lg-5">
+          <div class="kotak-samping">
+            <p class="label-kecil">Temukan Kami</p>
+            <h3>Ikuti Perjalanan <em>Kuliner</em> Kami</h3>
+            <p>Dapatkan konten kuliner segar setiap hari di semua platform kami!</p>
+
+            <!-- Sosmed  kolom pakai Bootstrap -->
+            <div class="row g-2 mt-3">
+              <div class="col-6"><a href="https://www.instagram.com/savoryspot.id/" class="kotak-sosmed">📸<div class="sosmed-nama">Instagram</div><div class="sosmed-akun">@savoryspot.id</div></a></div>
+              <div class="col-6"><a href="https://www.tiktok.com/@savoryspot" class="kotak-sosmed">🎵<div class="sosmed-nama">TikTok</div><div class="sosmed-akun">@savoryspot</div></a></div>
+              <div class="col-6"><a href="https://www.youtube.com/c/SavorySpotTV" class="kotak-sosmed">▶️<div class="sosmed-nama">YouTube</div><div class="sosmed-akun">SavorySpot TV</div></a></div>
+              <div class="col-6"><a href="https://wa.me/6285847663653" class="kotak-sosmed">💬<div class="sosmed-nama">WhatsApp</div><div class="sosmed-akun">+62 858 4766 3653</div></a></div>
+            </div>
+
+            <!-- Jam operasional -->
+            <div class="kotak-jam mt-3">
+              <p class="label-kecil mb-2">Jam Operasional</p>
+              <div class="baris-jam"><span>Senin – Jumat</span><strong>09:00 – 17:00</strong></div>
+              <div class="baris-jam"><span>Sabtu</span><strong>09:00 – 13:00</strong></div>
+              <div class="baris-jam"><span>Minggu & Libur</span><strong style="color:#c084a8">Tutup</strong></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ  -->
+  <section class="seksi-faq">
+    <div class="container">
+      <div class="text-center mb-4">
+        <p class="label-kecil">Pertanyaan</p>
+        <h2 class="judul-faq">Ada Pertanyaan? <em>Kami Jawab!</em></h2>
+      </div>
+
+      <!-- Accordion -->
+      <div class="accordion" id="faqAccordion">
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+              Bagaimana cara mendaftarkan restoran saya?
+            </button>
+          </h2>
+          <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">Kamu bisa mendaftarkan restoran melalui form di halaman ini dengan memilih topik "Daftarkan Restoran". Tim kami akan menghubungi dalam 1–2 hari kerja.</div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+              Apakah layanan SAVORYSPOT ini gratis?
+            </button>
+          </h2>
+          <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">Ya! SAVORYSPOT sepenuhnya gratis untuk pengguna. Kami mendapatkan pendapatan dari program kerja sama restoran premium.</div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+              Berapa lama respons dari tim SAVORYSPOT?
+            </button>
+          </h2>
+          <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">Kami membalas email dalam maksimal 24 jam di hari kerja. Untuk pertanyaan mendesak, hubungi kami via WhatsApp.</div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+              Apakah ada aplikasi mobile SAVORYSPOT?
+            </button>
+          </h2>
+          <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">Aplikasi mobile sedang dalam tahap pengembangan dan akan segera hadir! Daftarkan email kamu di newsletter agar tidak ketinggalan.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="row g-4 mb-4">
+        <div class="col-lg-4"><div class="footer-brand">SAVORY<span>SPOT</span></div><p>Rekomendasi kuliner terpercaya di seluruh Indonesia.</p></div>
+        <div class="col-lg-2 col-6"><h5>Kategori</h5><ul><li><a href="kategori.html">Masakan Indonesia</a></li><li><a href="kategori.html">Jajanan</a></li><li><a href="kategori.html">Dessert</a></li></ul></div>
+        <div class="col-lg-2 col-6"><h5>Kota</h5><ul><li><a href="#">Jakarta</a></li><li><a href="#">Surabaya</a></li><li><a href="#">Bandung</a></li></ul></div>
+        <div class="col-lg-2 col-6"><h5>Tentang</h5><ul><li><a href="#">Tentang Kami</a></li><li><a href="#">Blog</a></li><li><a href="kontak.html">Kontak</a></li></ul></div>
+      </div>
+      <hr/><p class="footer-bawah">©2026 SAVORYSPOT — Dibuat untuk para pecinta kuliner.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+  <script src="kontak.js"></script>
+</body>
+</html>
