@@ -1,14 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Poppins:wght@400;500;600;700&display=swap');
 
 :root {
-  --pink: #e91e8c;
-  --pink-gelap: #7d1060;
-  --pink-muda: #fce8f3;
-  --pink-soft: #ffd6e7;
-  --putih: #ffffff;
-  --teks: #2d0a1e;
-  --teks-abu: #7a4060;
-  --bg: #fff5f9;
+  --pink: #D4451A;
+  --pink-gelap: #4A1A0A;
+  --pink-muda: #FFF0E6;
+  --pink-soft: #FFDAC1;
+  --putih: #FFFAF5;
+  --teks: #2C1810;
+  --teks-abu: #6B4226;
+  --bg: #FFF8F2;
 }
 
 * {
@@ -63,7 +63,9 @@ body {
 }
 
 .header-halaman {
-  background: linear-gradient(135deg, #7d1060, #b5156c);
+  background: linear-gradient(#4a1a0a4f, #c75a3967), url('bg.jpg');
+  background-position: center;
+  background-size: cover;
   padding: 4rem 2rem;
   color: white;
 }
@@ -72,7 +74,7 @@ body {
   font-size: 0.8rem;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: #ffb3d9;
+  color: #FFD4A8;
   font-weight: 600;
   margin-bottom: 0.5rem;
 }
@@ -85,7 +87,7 @@ body {
 }
 
 .header-halaman h1 em {
-  color: #ffb3d9;
+  color: #FFD4A8;
   font-style: italic;
 }
 
@@ -317,7 +319,7 @@ footer {
 }
 
 .footer-brand span {
-  color: #ffb3d9;
+  color: #E8A87C;
 }
 
 footer p {
@@ -343,14 +345,14 @@ footer ul li {
 }
 
 footer ul a {
-  color: rgba(255, 214, 231, 0.6);
+  color: rgba(232, 168, 124, 0.6);
   font-size: 0.95rem;
   text-decoration: none;
   transition: color 0.2s;
 }
 
 footer ul a:hover {
-  color: #ffb3d9;
+  color: #E8A87C;
 }
 
 footer hr {
@@ -360,5 +362,5 @@ footer hr {
 .footer-bawah {
   text-align: center;
   font-size: 0.85rem;
-  color: rgba(255, 214, 231, 0.35);
+  color: rgba(232, 168, 124, 0.35);
 }
